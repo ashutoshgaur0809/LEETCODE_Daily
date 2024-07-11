@@ -1,0 +1,52 @@
+-- Select and Where
+-- SELECT * FROM `tbluser` WHERE name="Ashu" 
+
+-- Distinct 
+-- select DISTINCT(createdDate) from tbluser where name="Ashu" 
+
+-- Alter new col salary
+-- ALTER TABLE tbluser ADD COLUMN salary int AFTER createdDate
+-- 
+SELECT * FROM `tbluser` WHERE salary > 10000
+
+SELECT * FROM `tbluser` WHERE salary < 10000
+
+SELECT * FROM `tbluser` WHERE salary = 10000
+
+SELECT * FROM `tbluser` WHERE salary <> 10000
+
+SELECT * from tbluser where salary BETWEEN 10000 and 20000
+
+select * from tbluser WHERE name like "A%"
+
+select * from tbluser WHERE name like "%A%"
+
+select * from tbluser WHERE name in ("Ashu","Ram")
+
+And Or Not 
+SELECT * FROM `tbluser` WHERE name = "Ashu" or (name like "%A%") or NOT name = "Ram"
+
+order by
+SELECT * FROM tbluser ORDER BY name
+
+SELECT * FROM tbluser ORDER BY name desc
+
+
+update tbluser set name = "Ashu" where name is null
+
+
+SELECT * FROM tbluser LIMIT 3
+
+SELECT * FROM tbluser LIMIT 3 OFFSET 10
+
+SELECT * FROM `tbluser` WHERE name="Ashu" LIMIT 3
+
+SELECT min(salary) from tbluser
+
+SELECT max(salary) from tbluser
+
+SELECT sum(salary) from tbluser
+
+SELECT avg(salary) from tbluser
+
+SELECT COUNT(salary) from tbluser
